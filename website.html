@@ -2,18 +2,21 @@
 
 <head>
     <style>
-        .bottomleft {
+        pre#text {
             position: absolute;
-            top: 90%;
+            top: 40%;
             margin: 1px;
+            color:goldenrod;
+            font-size:6mm;
 
         }
 
         pre {
-            text-align: center;
+            text-align:center;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-style: inherit;
-            color:white;
+            color:gold;
+        
         }
 
         ul {
@@ -21,16 +24,17 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: black;
+            background-color:none;
         }
 
         li {
-            float: right;
+            float: left;
+            background-color:none;
         }
 
         li a {
             display: block;
-            color:powderblue;
+            color:white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
@@ -39,27 +43,59 @@
         }
 
         li a:hover:not(.active) {
-            background-color: greenyellow;
+            background-color: grey;
         }
 
         .active {
             background-color: green;
         }
+        body{
+            margin:0;
+            padding:0;
+            height:100%;
+            width:100%;
 
-        body {
-            background-image: url("https://i.pinimg.com/originals/aa/ba/5d/aaba5de665f57065ad1ff29c3599d015.jpg");
-            background-size: 85%;
         }
+        .container{
+            position: absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            background-size: cover;
+            background-position:center;
+            animation:animate 50s ease-in-out infinite;
+        }
+        @keyframes animate{
+            0%{
+                background-image: url("https://images.static-collegedunia.com/public/college_data/images/campusimage/15036539027.jpg");
+            }
+            25%{
+                background-image: url(a5.jpg.jpg);
+            }
+            50%{
+                background-image: url(a3.jpg.jpg);
+            }
+            75%{
+                background-image:url(a4.jpg.jpg);
+            }
+            100%{
+                background-image: url(a2.jpg.jpg);
+            }
+        }
+       
 
         img {
-            height: 70px;
-            length: 70px;
+            left:5px;
+            top:2px;
+            height: 100px;
+            length: 100px;
         }
         .button{
             background-color:palevioletred;
             border:black;
             color:wheat;
-            padding:15px 32px;
+            padding:16px 32px;
             text-align: center;
             text-decoration: none;
             display:inline-block;
@@ -67,18 +103,21 @@
             margin: 4px 2px;
             cursor: pointer;
             position:absolute;
-            left:200px;
+            left:675px;
             top: 600px;
         }
         .button:hover{
             background-color:tomato;
             color:whitesmoke;
         }
+                 
     </style>
 
 </head>
 
 <body>
+
+    <div class="container">
     <img src="https://images.shiksha.com/mediadata/images/1570095539phpwiDfLD.png" style="float:left">
     <pre> <h1>MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY
     ALLAHABAD</h1></pre>
@@ -86,17 +125,25 @@
         <li> <a class="active" href="#home">Home</a></li>
         <li><a href="about.html">AboutUs</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="#explore">Explore</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="#" class="button">REGISTER NOW</a>
-    <div class="bottomleft" style="color:indianred">
-        <pre>As we all know that dance is something like magic in the air and MNNIT has a great
-              dance culture.
-            "THERE ARE SHORCUTS TO HAPPINESS AND DANCE IS ONE OF THEM"
-        Dance is a performing art.It is described in many ways.It is when people move to a musical rythm.
-    The dance may be an informalplay,a part of a ritual,or a part of a professional performance.
-There are many kinds of dances,and every human society has its own dances.</pre>
+    
+    
+        <pre id="text">                        As we all know that dance is something like magic in the air and MNNIT has a great
+                                                        dance magic.
+                                    <c>"THERE ARE SHORCUTS TO HAPPINESS AND DANCE IS ONE OF THEM."</c>
+                                          Dance is a performing art.It is when people move to a musical rythm.                                                        
+                                     The dance may be an informalplay,a part of a ritual,or a part of a professional performance.
+                                                There are many kinds of dances,and every human society has its own dances.
+                                                                    
+                                                 Here you can explore the MNNIT Dance Tradition.
+                                                
+                                         For further information and to be the part of this group
+                                                   signup yourself</pre>
+ 
+    
+    <a href="#" class="button">SIGNUP / LOGIN</a>
     </div>
 </body>
 
