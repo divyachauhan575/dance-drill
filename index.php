@@ -8,6 +8,25 @@ if(empty($_SESSION['username'])) {
 <head>
      <title> user registration system using php and my sql</title>
      <link rel="stylesheet" type="text/css" href="style.css">
+     <style>
+         .button {
+            background-color:white;
+            border:black;
+            color:red;
+            padding:16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display:inline-block;
+            font-size:20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position:absolute;
+            left:725px;
+            top: 300px;
+
+
+         }
+         </style>
      </head>
      <body>
           <div class ="header">
@@ -30,5 +49,12 @@ if(empty($_SESSION['username'])) {
                     <?php endif ?>
            </div>
         
+
+           
+
+           <a href="index11.html" class="button">chat with us</a>
+  
+
+
 </body>
 </html> 
