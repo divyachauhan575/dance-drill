@@ -1,2 +1,2 @@
 # dance-drill
-dance website for mnit
+dance website for mnnit
