@@ -2,13 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <meta http-equiv="X-UA-compatible" content="ie=edge">
          <title>Chat</title>
 
          <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
          <script>
             var from = null, start = 0, url = 'http://localhost/chat.php';
+
              $(document).ready(function(){
                  from = prompt("Please enter your name");
                  
@@ -19,8 +20,8 @@
                      $.post(url, {
                          message: $('#message').val(),
                          from: from
-                        });
-                     $('#message').val('');
+                        })
+;                     $('#message').val('');
                      return false;
 
                  })
@@ -42,7 +43,7 @@
             }
 
             function renderMessage(item){
-              return '<div class="msg"><p>${item.from}</p>${item.message}</div>';
+              return `<div class="msg"><p>${item.from}</p>${item.message}</div>`;
             }
            
          </script>

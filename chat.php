@@ -1,6 +1,6 @@
 <?php
 
-$db = new  mysqli("localhost","root","root","chat");
+$db = new  mysqli("localhost","root","root","registration");
 if($db->connect_error){
     die("connection failed: " . $db->connect_error);
 
@@ -11,17 +11,17 @@ $message = isset($_POST['message']) ? $_POST['message'] : null;
 $from =isset($_POST['from']) ? $_POST['from'] : null;
 
 if(!empty($message) && !empty($from)){
-    $sql = "INSERT INTO 'chat' ('message','from') VALUES ('".$message."','".$from."')";
+    $sql = "INSERT INTO `chat` (`message`,`from`) VALUES ('".$message."','".$from."')";
     $result['send_status'] = $db->query($sql);
 }
-/*
+
 //print messages
 $start = isset($_GET['start']) ? intval($_GET['start']) : 0;
-$items= $db->query("SELECT * FROM 'chat' WHERE 'id' > " . $start);
+$items= $db->query("SELECT * FROM `chat` WHERE `id` > " . $start);
 while($row = $items->fetch_assoc()){
     $result['items'][] = $row;
 }
-*/
+
 
 
 $db->close();
@@ -30,3 +30,8 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 echo json_encode($result);
+
+
+
+
+
